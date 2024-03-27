@@ -17,6 +17,7 @@ export const Card = ({ title, subtitle, image , episodesLength , year, seasons, 
 const [textColor, setTextColor] = useState('text-black');
 
  useEffect(() => {
+   if(!image)return 
     const fac = new FastAverageColor();
     fac.getColorAsync(image, { algorithm: 'sqrt' })
       .then((color) => {
@@ -41,8 +42,9 @@ const [textColor, setTextColor] = useState('text-black');
         color: textColor 
       }}
       className="text-xl font-extrabold">{title}</p>
-      <p className="font-medium text-sm text-gray-500 dark:text-gray-300">
+      <p className="font-medium text-sm text-gray-500 dark:text-gray-300 line-clamp-3">
         {subtitle}
+        
       </p>
       <div className="flex-shrink-0 h-56 mt-2 shadow-2xl ">
         <img

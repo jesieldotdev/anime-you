@@ -109,9 +109,13 @@ export const Player = ({ title, subtitle, image , episodesLength , year, seasons
    
       <div className="flex-shrink-0 h-64 ">
      
-        <iframe src="https://mega.nz/embed/F2UUjCpD#HIJjWpSi-hF6HrNp4tw6ySfVGFGlAFIpqb8N_-iz5MM"
+        <iframe id="player" type="text/html" width="640" height="360"
         className="rounded-sm object-cover h-full w-full"
-        frameborder="0" allowfullscreen></iframe>
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0"></iframe>
+        {/**<iframe src="https://mega.nz/embed/F2UUjCpD#HIJjWpSi-hF6HrNp4tw6ySfVGFGlAFIpqb8N_-iz5MM"
+        className="rounded-sm object-cover h-full w-full"
+        frameborder="0" allowfullscreen></iframe> **/}
         
       </div>
       <div className="p-4">
