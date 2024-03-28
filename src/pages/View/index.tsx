@@ -1,4 +1,4 @@
-import {Player} from '../../components/Player/index.tsx'
+import {Player} from './components/Player/index.tsx'
 import {Card} from '../../components/Card/index.tsx'
 export const ViewPage = () =>{
   return (

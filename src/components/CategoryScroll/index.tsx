@@ -1,13 +1,9 @@
 // src/components/CategoryScroll.tsx
 import React from 'react';
 
-interface Category {
- id: number;
- name: string;
-}
+
 
 interface CategoryScrollProps {
- categories: Category[];
 }
 
 export const CategoryScroll: React.FC<CategoryScrollProps> = () => {
@@ -20,7 +16,7 @@ export const CategoryScroll: React.FC<CategoryScrollProps> = () => {
  // Adicione mais categorias conforme necessário
 ].map((item,index) => ({id:index, ...item}))
 
-function selectedClass(sel:string){
+function selectedClass(sel:number){
   if(sel === selected)return 'bg-zinc-200 text-black'
   else return 'bg-zinc-800 text-white'
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {FastAverageColor } from 'fast-average-color';
 
 interface CardProps {
@@ -7,11 +7,10 @@ interface CardProps {
  image?: string;
  episodesLength?: number
  seasons?: number
- year: number 
- onClick: (slug:string)=>void
+ onClick?: (slug:string)=>void
 }
 
-export const Card = ({ title, subtitle, image , episodesLength , year, seasons, onClick}: CardProps) => {
+export const Card = ({ title, subtitle, image, onClick}: CardProps) => {
   
   const [backgroundColor, setBackgroundColor] = useState('#282828'); // Cor padrão até a imagem ser carregada
 const [textColor, setTextColor] = useState('text-black');
@@ -22,8 +21,8 @@ const [textColor, setTextColor] = useState('text-black');
     fac.getColorAsync(image, { algorithm: 'sqrt' })
       .then((color) => {
         setBackgroundColor(color.hex);
-        const textColor = fac.getColorFromArray([color.hex], { algorithm: 'sqrt', mode: 'dark' });
-        setTextColor(textColor.hex);
+        // const textColor = fac.getColorFromArray([color.hex], { algorithm: 'sqrt', mode: 'dark' });
+        // setTextColor(textColor.hex);
       })
       .catch((error) => console.error('Erro ao obter a cor predominante:', error));
  }, [image]);
@@ -31,7 +30,7 @@ const [textColor, setTextColor] = useState('text-black');
   
  return (
     <div
-    onClick={()=>onClick(title)}
+    onClick={()=>onClick ? onClick(title) : null}
     style={{
       backgroundColor: backgroundColor,
       

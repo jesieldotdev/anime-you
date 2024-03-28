@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import App from './App.tsx'
 import {ViewPage} from "./pages/View/index.tsx"
-import {AppBar} from "./components/Appbar/index.tsx"
 import './index.css'
 
 const router = createBrowserRouter([
