@@ -1,5 +1,6 @@
 // AppBar.tsx
 import React from 'react';
+import Headroom from 'react-headroom';
 import { Search } from 'lucide-react';
 import { Bell } from 'lucide-react';
 import {CategoryScroll} from "../../components/CategoryScroll/index.tsx"
@@ -10,7 +11,8 @@ interface AppBarProps {
 export const AppBar: React.FC<AppBarProps> = ({ title }) => {
  return (
    <>
-    <div className="bg-zinc-900 text-white px-4 py-2 fixed top-0 left-0 right-0 z-50 flex  flex-col items-center justify-left">
+    <Headroom>
+    <div className="bg-[#161616] text-white px-4 py-2 flex  flex-col items-center justify-left">
     <div className="flex  justify-between w-full ">
       <div className="text-lg font-extrabold font-sans">{title}</div>
       <div className="flex space-x-4">
@@ -27,6 +29,7 @@ export const AppBar: React.FC<AppBarProps> = ({ title }) => {
       </div>
       <CategoryScroll />
     </div>
+    </Headroom>
     </>
  );
 };

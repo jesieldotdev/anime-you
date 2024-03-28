@@ -29,6 +29,8 @@
 /*  color: #535bf2;*/
 /*}*/
 
+
+
 /*body {*/
 /*  margin: 0;*/
 /*  display: flex;*/
@@ -73,3 +75,9 @@
     background-color: #f9f9f9;
   }
 }
+
+
+  ::-webkit-scrollbar {
+display: none;
+}
+ 
