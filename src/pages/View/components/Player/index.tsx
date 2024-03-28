@@ -20,11 +20,11 @@ export const Player = ({ title}: CardProps) => {
                className="rounded-sm object-cover h-full w-full"
                src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
             ></iframe> */}
-            *<iframe src="https://mega.nz/embed/F2UUjCpD#HIJjWpSi-hF6HrNp4tw6ySfVGFGlAFIpqb8N_-iz5MM"
+            <iframe src="https://mega.nz/embed/F2UUjCpD#HIJjWpSi-hF6HrNp4tw6ySfVGFGlAFIpqb8N_-iz5MM"
                className="rounded-sm object-cover h-full w-full"
                allowFullScreen
                frameBorder={0}
-            ></iframe> *
+            ></iframe> 
 
          </div>
          <div className="p-4">
